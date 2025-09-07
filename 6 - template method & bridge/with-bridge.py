@@ -68,5 +68,5 @@ class MinMaxTrader(TradingBot):
     def should_sell(self, prices: List[float]) -> bool:
         return prices[-1] == max(prices)
 
-application = AverageTrader(Coinbase())
+application = AverageTrader(Binance())
 application.check_prices("BTC/USD")
